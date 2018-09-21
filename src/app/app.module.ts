@@ -4,6 +4,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppConfig } from './app.config';
 import { AppComponent } from './app.component';
+import { RoutingModule } from './routing/routing.module';
 import { FrontComponent } from './pages/front/front.component';
 
 export function initializeConfig(config: AppConfig) {
@@ -17,7 +18,8 @@ export function initializeConfig(config: AppConfig) {
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
   providers: [
     AppConfig,
