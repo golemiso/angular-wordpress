@@ -1,0 +1,6 @@
+{
+    "api": {
+        "uri": "https://demo.wp-api.org",
+        "type": "wordpress"
+    }
+}
