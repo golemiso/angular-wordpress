@@ -4,6 +4,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppConfig } from './app.config';
 import { AppComponent } from './app.component';
+import { FrontComponent } from './pages/front/front.component';
 
 export function initializeConfig(config: AppConfig) {
   return () => config.load();
@@ -11,7 +12,8 @@ export function initializeConfig(config: AppConfig) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FrontComponent
   ],
   imports: [
     BrowserModule,
