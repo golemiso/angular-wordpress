@@ -1,9 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable, of } from 'rxjs';
+
+import { Article } from './models/article';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class WordpressService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  fetchArticles(): Observable<Array<Article>> {
+
+    return this.http.get<Array<Article>>("https://demo.wp-api.org/wp-json/wp/v2/posts")
+    // const article = [{ slug: "slug", title: "title", content: "content" }];
+    // return of(article);
+  }
 }
