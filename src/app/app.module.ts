@@ -6,6 +6,7 @@ import { AppConfig } from './app.config';
 import { AppComponent } from './app.component';
 import { RoutingModule } from './routing/routing.module';
 import { FrontComponent } from './pages/front/front.component';
+import { ArticleComponent } from './pages/article/article.component';
 
 export function initializeConfig(config: AppConfig) {
   return () => config.load();
@@ -14,7 +15,8 @@ export function initializeConfig(config: AppConfig) {
 @NgModule({
   declarations: [
     AppComponent,
-    FrontComponent
+    FrontComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
