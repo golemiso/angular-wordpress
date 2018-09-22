@@ -1,6 +1,6 @@
 <ul class="front">
   <li *ngFor="let article of articles">
     {{article.slug}}
-    <p [innerHtml]="article.content.rendered"></p>
+    <p [innerHtml]="article.excerpt.rendered"></p>
   </li>
 </ul>
