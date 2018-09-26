@@ -1,6 +1,6 @@
-<ul class="front">
-  <li *ngFor="let article of articles">
-    {{article.title.rendered}}
+<mat-card *ngFor="let article of articles">
+  <mat-card-title>{{article.title.rendered}}</mat-card-title>
+  <mat-card-content>
     <p [innerHtml]="article.excerpt.rendered"></p>
-  </li>
-</ul>
+  </mat-card-content>
+</mat-card>
